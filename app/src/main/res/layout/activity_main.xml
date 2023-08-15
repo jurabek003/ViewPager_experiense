@@ -5,12 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/my_tab_layout"
+    <LinearLayout
+        android:id="@+id/my_layner"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tht_simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Oraliq"
+            android:textAllCaps="false"
+            android:textColor="#FFAB00"
+            android:textSize="20sp"
+            android:fontFamily="@font/berkshire_swash"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/my_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintStart_toEndOf="@+id/tht_simple"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/my_view_pager"
@@ -18,6 +40,8 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_tab_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/my_layner"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
