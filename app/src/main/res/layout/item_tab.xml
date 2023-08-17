@@ -12,7 +12,7 @@
         android:text="Junior"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="normal|bold"
         android:fontFamily="@font/berkshire_swash"
         android:paddingHorizontal="10dp"/>

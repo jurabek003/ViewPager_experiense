@@ -5,11 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:id="@+id/my_layner"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="?actionBarSize"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -17,14 +20,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/berkshire_swash"
             android:paddingHorizontal="10dp"
             android:text="Oraliq"
             android:textAllCaps="false"
             android:textColor="#FFAB00"
             android:textSize="20sp"
-            android:fontFamily="@font/berkshire_swash"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/my_tab_layout"
